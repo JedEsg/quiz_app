@@ -36,7 +36,6 @@ img{
 
 #question-container *, #confirm-container *{
     margin: 0.5rem;
-    color: white;
 }
 
 #question-container{
@@ -61,11 +60,14 @@ img{
 .navbtn{
     padding-inline: 1rem;
     padding-block: 0.5rem;
+    margin-inline: 1rem !important;
     background-color:steelblue;
     border-radius: 1rem;
     border: none;
-    transition: 500ms;
+    transition: 300ms;
     color: white;
+    height: 2.5rem;
+    width: 4rem;
 }
 
 .navbtn:hover{
@@ -88,4 +90,9 @@ img{
     grid-template-columns: repeat(auto-fit, 24rem);
 }
 
-
+h4{
+    color: steelblue;
+    position: absolute;
+    right: 0.5rem;
+    top: 1rem;
+}
