@@ -6,10 +6,20 @@
     box-sizing: border-box;
 }
 
+
+:root{
+    --dark: rgb(43, 76, 104);
+    --gray: rgb(33, 40, 53);
+}
+
 img{
     border: 0;
     vertical-align: bottom;
 
+}
+
+.hide{
+    display: none;
 }
 
 .quiz{
@@ -20,41 +30,33 @@ img{
     background-color: cornflowerblue;
 }
 
-.hide{
-    display: none;
-}
-
-#confirm-container, #question-container{
+#container{
     text-align: center;
-    position: relative;
-    width: auto;
+    position: absolute;
     margin: auto;
-    top: 10rem;
+    top: 7rem;
+    height: auto;
+    width: 100%;
     box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 0.2);
     background-color: white;
+    padding-block: 0.25rem;
+    transition: 0.5s;
 }
 
-#question-container *, #confirm-container *{
-    margin: 0.5rem;
-}
-
-#question-container{
-    background-color: white;
-    border-radius: 1rem;
-    height: auto;
-    width: 50rem;
-}
-
-
-#confirm-container h1{
+h1{
     font-size: 3rem;
     color: steelblue;
 }
 
-#question-container h2{
+#question-container{
+    position: relative;
+}
+
+#question-container > h2{
     font-size: 2rem;
     color: steelblue;
-    padding: 1rem;
+    padding: 0.5rem;
+    margin-top: 2rem;
 }
 
 .navbtn{
@@ -67,13 +69,29 @@ img{
     transition: 300ms;
     color: white;
     height: 2.5rem;
-    width: 4rem;
+    min-width: 5rem;
+    margin-block: 1rem;
 }
 
 .navbtn:hover{
     background-color: white;
-    color: black !important; 
+    color: var(--dark) !important; 
     font-weight: 800;
+}
+
+#pick-btn{
+    margin-top: 1rem !important;
+}
+
+.switch-question-container{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#start-btn{
+    position: relative !important;
 }
 
 #answer{
@@ -83,16 +101,21 @@ img{
     font-weight: 500;
 }
 
+#question{
+    width: 50rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0.5rem;
+}
+
 .btn-grid{
     display: grid;
     gap: 0.25rem;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, 24rem);
+    grid-template-columns: repeat(2, 24rem);
 }
 
 h4{
     color: steelblue;
-    position: absolute;
-    right: 0.5rem;
-    top: 1rem;
 }

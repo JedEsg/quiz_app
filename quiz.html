@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project: Quiz App</title>
+    <link rel="shortcut icon" href="quizcrazelogo.png">
     <link rel="stylesheet" href="quizstyle.css">
     <script defer src="script.js"></script>
 </head>
@@ -14,23 +15,29 @@
 <body>
     
     <section class="quiz">
-            <div id="confirm-container">
-                <h1>Take the Quiz</h1>
-                <button id="start-btn" class="navbtn">Enter Quiz</button>
+        <div id="container">
+            <h1><img style="width:4rem; aspect-ratio: 1; position: relative;" src="quizcrazelogo.png"><i>uiz Craze</i></h1>
+            <div id="confirm-container" class="">
+                <button id="pick-btn" class="navbtn">Pick a Quiz</button>
+                <button id="start-btn" class="navbtn hide">Start Quiz</button>
             </div>
             <div id="question-container" class="hide">  
                 <h2>Question :</h2>
-                <h3 id="question"></h3>
+                <h3 id="question">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere at eius est nam aliquid harum nobis qui placeat molestiae eaque?</h3>
+                <br>
                 <div class="btn-grid" id="answers">
                     <button id="answer">Answer 1</button>
                     <button id="answer">Answer 2</button>
                     <button id="answer">Answer 3</button>
                     <button id="answer">Answer 4</button>
                 </div>
-                <button id="prev-btn" class="navbtn">Prev</button>
-                <button id="next-btn" class="navbtn">Next</button>
-                <h4><span>1</span>/<span>10</span></h4>
+                <div class="switch-question-container">
+                    <button id="prev-btn" class="navbtn">Prev</button>
+                    <h4><span>1</span>/<span>10</span></h4>
+                    <button id="next-btn" class="navbtn">Next</button>
+                </div>
             </div>
+        </div>
     </section>
 
 </body>
